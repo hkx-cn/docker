@@ -25,8 +25,12 @@ RUN rm -rf /home/hkx/.config/nvim/.git
 # 安装leetcode插件
 COPY leetcode.lua /home/hkx/.config/nvim/lua/plugins/
 
+# 增加剪切板功能
+RUN echo 'vim.opt.clipboard = "unnamedplus"' >> /home/hkx/.config/nvim/lua/config/options.lua
+
 # 更改权限
 RUN chown -R hkx:hkx /home/hkx/.config
+
 # 设置ssh登陆
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 RUN echo 'PubKeyAuthentication yes' >> /etc/ssh/sshd_config

@@ -26,8 +26,7 @@ RUN rm -rf /home/hkx/.config/nvim/.git
 COPY leetcode.lua /home/hkx/.config/nvim/lua/plugins/
 
 # 更改权限
-RUN chown -R hkx:hkx /home/hkx/.config/nvim
-
+RUN chown -R hkx:hkx /home/hkx/.config
 # 设置ssh登陆
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 RUN echo 'PubKeyAuthentication yes' >> /etc/ssh/sshd_config

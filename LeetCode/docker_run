@@ -1,1 +1,2 @@
+docker build -t leetcode .
 docker run -itd --name LeetCode --hostname LeetCode -w /home/hkx -p 23:22 leetcode

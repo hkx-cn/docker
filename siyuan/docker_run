@@ -1,0 +1,8 @@
+docker run -d \
+  -v /siyuan/workspace:/siyuan/workspace \
+  -p 6806:6806 \
+  -e PUID=1001 -e PGID=1002 \
+  # --name siyuan --hostname siyuan \
+  b3log/siyuan \
+  --workspace=/siyuan/workspace/ \
+  --accessAuthCode=xxx

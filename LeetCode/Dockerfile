@@ -1,10 +1,10 @@
 # 使用 Ubuntu 作为基础镜像
 FROM ubuntu:latest
 
-# 更新包列表并安装 openssh-server
+# 更新包列表并安装 openssh-server以及其他必要程序
 RUN apt-get update && \
     apt-get install -y openssh-server && \
-    apt-get install -y sudo git gcc g++ make curl neovim xsel && \
+    apt-get install -y sudo git gcc g++ make curl xsel && \
     mkdir /var/run/sshd
 
 # 设置 root 用户密码
@@ -15,6 +15,12 @@ RUN useradd -m -G sudo -s /usr/bin/bash hkx
 
 # 设置 hkx 用户密码
 RUN echo 'hkx:password' | chpasswd
+
+# 安装neovim v0.10.2
+RUN curl -L https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage -o /tmp/nvim.appimage
+RUN chmod +x /tmp/nvim.appimage
+RUN ./tmp/nvim.appimage --appimage-extract
+RUN ln -s /squashfs-root/usr/bin/nvim /usr/bin/nvim
 
 # 安装LazyVim
 RUN git clone https://github.com/LazyVim/starter /home/hkx/.config/nvim/

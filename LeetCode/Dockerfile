@@ -29,13 +29,13 @@ RUN git clone https://github.com/LazyVim/starter /home/hkx/.config/nvim/
 RUN rm -rf /home/hkx/.config/nvim/.git
 
 # 安装leetcode插件
-COPY leetcode.lua /home/hkx/.config/nvim/lua/plugins/
+COPY plugins.lua /home/hkx/.config/nvim/lua/plugins/
 
-# 禁用noice插件
-COPY noice.lua /home/hkx/.config/nvim/lua/plugins/
+# 增加剪切板功能、缩进等
+COPY options.lua /home/hkx/.config/nvim/lua/config/
 
-# 增加剪切板功能
-RUN echo 'vim.opt.clipboard = "unnamedplus"' >> /home/hkx/.config/nvim/lua/config/options.lua
+# 增加按键设置
+COPY keymaps.lua /home/hkx/.config/nvim/lua/config/
 
 # 更改权限
 RUN chown -R hkx:hkx /home/hkx/.config

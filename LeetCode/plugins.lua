@@ -1,4 +1,5 @@
 return {
+    -- 添加leetcode插件
     {
         "kawre/leetcode.nvim",
         build = ":TSUpdate html",
@@ -20,7 +21,7 @@ return {
             ---@type lc.lang
             lang = "cpp",
 
-            cn = {     -- leetcode.cn
+            cn = { -- leetcode.cn
                 enabled = true, ---@type boolean
                 translator = true, ---@type boolean
                 translate_problems = true, ---@type boolean
@@ -102,5 +103,30 @@ return {
             ---@type boolean
             image_support = false,
         }
-    }
+    },
+    -- 禁用noice插件
+    {
+        "folke/noice.nvim",
+        enabled = false,
+    },
+    -- 添加 Gruvbox 主题
+    { "ellisonleao/gruvbox.nvim" },
+    -- 配置 LazyVim 加载 Gruvbox 主题
+    -- { "LazyVim/LazyVim",         opts = { colorscheme = "gruvbox" } },
+    -- 添加 Zephyr 主题
+    { "glepnir/zephyr-nvim" },
+    -- 配置 LazyVim 加载 Zephyr 主题
+    -- { "LazyVim/LazyVim",         opts = { colorscheme = "zephyr" } },
+    -- 添加 Nord 主题
+    { "shaunsingh/nord.nvim" },
+    -- 配置 LazyVim 加载 Nord 主题
+    -- { "LazyVim/LazyVim",         opts = { colorscheme = "nord" } },
+
+    -- 禁用缩进参考线
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        opts = {
+            enabled = false,
+        },
+    },
 }

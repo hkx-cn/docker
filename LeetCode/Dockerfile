@@ -31,6 +31,9 @@ RUN rm -rf /home/hkx/.config/nvim/.git
 # 安装leetcode插件
 COPY leetcode.lua /home/hkx/.config/nvim/lua/plugins/
 
+# 禁用noice插件
+COPY noice.lua /home/hkx/.config/nvim/lua/plugins/
+
 # 增加剪切板功能
 RUN echo 'vim.opt.clipboard = "unnamedplus"' >> /home/hkx/.config/nvim/lua/config/options.lua
 

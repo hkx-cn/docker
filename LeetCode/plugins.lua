@@ -110,15 +110,15 @@ return {
         enabled = false,
     },
     -- 添加 Gruvbox 主题
-    { "ellisonleao/gruvbox.nvim" },
+    -- { "ellisonleao/gruvbox.nvim" },
     -- 配置 LazyVim 加载 Gruvbox 主题
     -- { "LazyVim/LazyVim",         opts = { colorscheme = "gruvbox" } },
     -- 添加 Zephyr 主题
-    { "glepnir/zephyr-nvim" },
+    -- { "glepnir/zephyr-nvim" },
     -- 配置 LazyVim 加载 Zephyr 主题
     -- { "LazyVim/LazyVim",         opts = { colorscheme = "zephyr" } },
     -- 添加 Nord 主题
-    { "shaunsingh/nord.nvim" },
+    -- { "shaunsingh/nord.nvim" },
     -- 配置 LazyVim 加载 Nord 主题
     -- { "LazyVim/LazyVim",         opts = { colorscheme = "nord" } },
 

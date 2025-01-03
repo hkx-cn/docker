@@ -4,7 +4,7 @@ FROM ubuntu:latest
 # 更新包列表并安装 openssh-server以及其他必要程序
 RUN apt-get update && \
     apt-get install -y openssh-server && \
-    apt-get install -y sudo git gcc g++ make curl xsel && \
+    apt-get install -y sudo git gcc g++ make curl xsel fzf && \
     mkdir /var/run/sshd
 
 # 设置 root 用户密码

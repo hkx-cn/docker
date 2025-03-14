@@ -1,4 +1,5 @@
 docker run -d \
+  --name siyuan \
   -v /siyuan/workspace:/siyuan/workspace \
   -p 6806:6806 \
   -e PUID=1001 -e PGID=1002 \

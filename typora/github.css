@@ -50,7 +50,8 @@ body {
 }
 
 #write {
-    max-width: 860px;
+    /* max-width: 860px; */
+    max-width: 90%;
   	margin: 0 auto;
   	padding: 30px;
     padding-bottom: 100px;
@@ -58,13 +59,13 @@ body {
 
 @media only screen and (min-width: 1400px) {
 	#write {
-		max-width: 1024px;
+		/* max-width: 1024px; */
 	}
 }
 
 @media only screen and (min-width: 1800px) {
 	#write {
-		max-width: 1200px;
+		/* max-width: 1200px; */
 	}
 }
 

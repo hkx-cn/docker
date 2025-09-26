@@ -81,8 +81,8 @@ services:
         # Add any other gitlab.rb configuration here, each on its own line
         external_url 'https://gitlab.kez.org.cn'
     ports:
-      - '8080:80'
-      - '8443:443'
+      - '80:80'
+      - '443:443'
       - '22:22'
     volumes:
       - '$GITLAB_HOME/config:/etc/gitlab'
@@ -96,5 +96,4 @@ services:
 ```c++
 sudo -E docker compose up -d
 ```
-
 

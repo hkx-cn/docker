@@ -19,7 +19,8 @@ WantedBy = multi-user.target
 ## frpc.tmol
 
 ```
-serverAddr = "124.220.83.47"
+#serverAddr = "124.220.83.47"
+serverAddr = "154.89.148.214"
 serverPort = 7000
 auth.token = "token"
 
@@ -32,17 +33,17 @@ remotePort = 2222
 
 [[proxies]]
 name = "gitlab-https"
-type = "https"
-customDomains = ["gitlab.kez.org.cn"]
+type = "tcp"
 localIP = "127.0.0.1"
 localPort = 443
+remotePort = 8443
 
 [[proxies]]
 name = "gitlab-http"
-type = "http"
-customDomains = ["gitlab.kez.org.cn"]
+type = "tcp"
 localIP = "127.0.0.1"
 localPort = 80
+remotePort = 8080
 
 [[proxies]]
 name = "gitlab-ssh"
@@ -72,8 +73,6 @@ WantedBy = multi-user.target
 
 ```
 bindPort = 7000
-vhostHTTPPort = 8080
-vhostHTTPSPort = 8443
 webServer.addr = "0.0.0.0"
 webServer.port = 7500
 webServer.user = "hkx"
@@ -81,4 +80,3 @@ webServer.password = "recall912012"
 
 auth.token = "token"
 ```
-

@@ -25,9 +25,16 @@ serverPort = 7000
 auth.token = "token"
 
 [[proxies]]
-name = "home-ssh"
+name = "local-xrdp"
 type = "tcp"
-localIP = "192.168.2.123"
+localIP = "127.0.0.1"
+localPort = 3389
+remotePort = 3389
+
+[[proxies]]
+name = "local-ssh"
+type = "tcp"
+localIP = "127.0.0.1"
 localPort = 2222
 remotePort = 2222
 
@@ -48,7 +55,7 @@ remotePort = 8080
 [[proxies]]
 name = "gitlab-ssh"
 type = "tcp"
-localIP = "192.168.2.123"
+localIP = "127.0.0.1"
 localPort = 22
 remotePort = 22
 ```

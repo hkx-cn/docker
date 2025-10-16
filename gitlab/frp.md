@@ -19,8 +19,8 @@ WantedBy = multi-user.target
 ## frpc.tmol
 
 ```
-#serverAddr = "124.220.83.47"
-serverAddr = "154.89.148.214"
+serverAddr = "124.220.83.47"
+#serverAddr = "154.89.148.214"
 serverPort = 7000
 auth.token = "token"
 
